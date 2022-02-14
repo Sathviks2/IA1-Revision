@@ -1,0 +1,50 @@
+
+Breakpoint 1, main () at p3original.c:21
+21  {
+(gdb) n
+23      input(&x,&y);
+(gdb) s
+input (a=0x7ffe8ba36dfc, b=0x7ffe8ba36e00)
+    at p3original.c:4
+4   printf("enter first number\n");
+(gdb) n
+enter first number
+5   scanf("%d",a);
+(gdb) n
+2
+6   printf("enter second number\n");
+(gdb) n
+enter second number
+7   scanf("%d",b);
+(gdb) n
+4
+8   return 0;
+(gdb) n
+9   }
+(gdb) n
+main () at p3original.c:24
+24      add(x,y,&z);
+(gdb) s
+add (a=2, b=4, c=0x7ffe8ba36e04)
+    at p3original.c:12
+12      *c=a+b;
+(gdb) n
+13      return 0;
+(gdb) n
+14  }
+(gdb) n
+main () at p3original.c:25
+25      output(z);
+(gdb) s
+output (c=6) at p3original.c:17
+17      printf("sum of two numbers is %d\n", c);
+(gdb) n
+sum of two numbers is 6
+18      return 0;
+(gdb) n
+19  }
+(gdb) n
+main () at p3original.c:26
+26      return 0;
+(gdb) n
+27  }
