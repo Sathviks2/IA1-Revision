@@ -1,50 +1,41 @@
-
-Breakpoint 1, main () at p3original.c:21
-21  {
+Breakpoint 1, main () at p1final.c:19
+warning: Source file is more recent than executable.
+19  {
 (gdb) n
-23      input(&x,&y);
+21    input(&a,&b);
 (gdb) s
-input (a=0x7ffe8ba36dfc, b=0x7ffe8ba36e00)
-    at p3original.c:4
-4   printf("enter first number\n");
+input (a=0x7ffe7e2f001c, b=0x7ffe7e2f0020) at p1final.c:5
+5     printf("enter the numbers\n");
 (gdb) n
-enter first number
-5   scanf("%d",a);
+enter the numbers
+6     scanf("%d%d",a,b);
 (gdb) n
-2
-6   printf("enter second number\n");
+5
+7
+7     return 0;
 (gdb) n
-enter second number
-7   scanf("%d",b);
+8   }
 (gdb) n
-4
-8   return 0;
-(gdb) n
-9   }
-(gdb) n
-main () at p3original.c:24
-24      add(x,y,&z);
+main () at p1final.c:22
+22    add(a,b,&c);
 (gdb) s
-add (a=2, b=4, c=0x7ffe8ba36e04)
-    at p3original.c:12
-12      *c=a+b;
+add (a=5, b=7, c=0x7ffe7e2f0024) at p1final.c:11
+11    *c=a+b;
 (gdb) n
-13      return 0;
+12    return 0;
 (gdb) n
-14  }
+13  }
 (gdb) n
-main () at p3original.c:25
-25      output(z);
+main () at p1final.c:23
+23    output(c);
 (gdb) s
-output (c=6) at p3original.c:17
-17      printf("sum of two numbers is %d\n", c);
+output (c=12) at p1final.c:16
+16    printf("sum of two numbers is %d\n",c);
 (gdb) n
-sum of two numbers is 6
-18      return 0;
+sum of two numbers is 12
+17  }
 (gdb) n
-19  }
+main () at p1final.c:24
+24    return 0;
 (gdb) n
-main () at p3original.c:26
-26      return 0;
-(gdb) n
-27  }
+25  }

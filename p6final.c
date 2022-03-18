@@ -5,23 +5,27 @@ void input(char *a,char *b)
   scanf("%s%s",a,b);
 
 }
+
 int _strcmp(char *a, char *b)
 {
   int i=0;
   for(i=0;a[i]==b[i]&&b[i]!='\0';i++)
   return a[i]-b[i];
+  
 }
+
 void output(char *a,char *b,int r)
 {
-  if(r>0)
+  if(r<0)
   {
     printf("%s is greater than %s\n",a,b);
   }
-  else if(r<0)
+  else if(r>0)
   {
-    printf("%s is smaller than %s\n",a,b);
+    printf("%s is greater than %s\n",b,a);
   }
 }
+
 int main()
 {
   char a[100],b[100];

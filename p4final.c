@@ -6,6 +6,7 @@ int inputarraysize()
   scanf("%d",&n);
   return n;
 }
+
 void inputarray(int n,int a[n])
 {
   int i;
@@ -15,6 +16,7 @@ void inputarray(int n,int a[n])
     scanf("%d",&a[i]);
   }
 }
+
 int sumnarray(int n,int a[n])
 {
   int i,sum=0;
@@ -24,6 +26,7 @@ int sumnarray(int n,int a[n])
   }
   return sum;
 }
+
 void output(int n,int a[n],int sum)
 {
   int i;
@@ -34,6 +37,7 @@ void output(int n,int a[n],int sum)
 }
 printf("%d is %d\n",a[n-1],sum);
 }
+
 int main()
 {
   int n,sum;

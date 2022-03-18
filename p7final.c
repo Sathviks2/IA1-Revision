@@ -3,6 +3,7 @@ typedef struct complex
 {
   float real,imaginary;
 }
+
 Complex;
 Complex input_complex()
 {
@@ -11,6 +12,7 @@ Complex input_complex()
   scanf("%f%f",&a.real,&a.imaginary);
   return a;
 }
+
 Complex add(Complex a, Complex b)
 {
   Complex c;
@@ -18,10 +20,12 @@ Complex add(Complex a, Complex b)
   c.imaginary=a.imaginary+b.imaginary;
   return c;
 }
+
 void output(Complex a, Complex b, Complex c)
 {
   printf("(%f+%fi)+(%f+%fi) is (%f+%fi)\n",a.real,a.imaginary,b.real,b.imaginary,c.real,c.imaginary);
 }
+
 int main()
 {
   Complex a,b,c;
